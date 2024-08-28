@@ -38,7 +38,7 @@ export const menus = [{
             { id: '3-1-1', label: 'FEA Visualisation', url: 'http://localhost:8080/Dashboard/FEA_Home.html/' },
             { id: '3-1-2', label: 'Real-time SHM', url: 'http://localhost:8080/Dashboard/SHM.html/' },
             { id: '3-1-3', label: 'Degradation Analysis', url: 'http://localhost:8501/' },
-            { id: '3-1-4', label: 'Defect Localisation', url: 'http://' }
+            { id: '3-1-4', label: 'Defect Localisation', url: 'https://www.baidu.com/' }
         ]
     },
     {
