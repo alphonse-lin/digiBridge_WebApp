@@ -1,0 +1,11 @@
+Model Information:
+* title:	Simple Toy Cars
+* source:	https://sketchfab.com/3d-models/simple-toy-cars-06cc117585bc465b888aa4bbd818986a
+* author:	Fridqeir (https://sketchfab.com/Fridqeir)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Simple Toy Cars" (https://sketchfab.com/3d-models/simple-toy-cars-06cc117585bc465b888aa4bbd818986a) by Fridqeir (https://sketchfab.com/Fridqeir) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

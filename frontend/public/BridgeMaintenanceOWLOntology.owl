@@ -1,0 +1,933 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2021/untitled-ontology-31#"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2021/untitled-ontology-31"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:BridgeMaintenance="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasAngleCorrection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasAngleCorrection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthDetection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthDetection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthEvaluation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthEvaluation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasSurfaceCorrection -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasSurfaceCorrection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasWater -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasWater"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isBottomSurface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isBottomSurface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isHorizontal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isHorizontal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isPrimary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isPrimary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSecondary -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSecondary"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSideSurface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSideSurface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isTopSurface -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isTopSurface"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Depth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Depth">
+        <rdfs:comment>检测水深（0-10m）</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Kbt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Kbt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#R -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#R"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rab -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rab"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rah -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rah"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rat"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Raα -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Raα"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rb"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rh -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rh"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnb"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnα -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnα"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rα -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rα"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Strength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Strength">
+        <rdfs:comment>原构件的混凝土强度等级（C30,C40,C50）</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#a -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#a"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#b -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#b"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#c -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#c"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#d -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#d"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#e -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#e"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#f -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#f"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcue"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcuk -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcuk"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#level -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#α -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#α">
+        <rdfs:comment>检测角度（±30,45,60,90）</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Abutment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Abutment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AngleCorrection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AngleCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousReboundTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousReboundTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthDetection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ArchBridgeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ArchBridgeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeMaterial -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeMaterial"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CableStayedBridgeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CableStayedBridgeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CompressionTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CompressionTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Concrete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Concrete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ConicalSlope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ConicalSlope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#DrainageSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#DrainageSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#EvaluationScale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#EvaluationScale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthEvaluation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ExpansionJointsDevice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ExpansionJointsDevice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Foundation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Foundation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Handrail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Handrail">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pavement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pavement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StructuralImportance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#RegulatingStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#RegulatingStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Riverbed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Riverbed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StructuralImportance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Sidewalk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Sidewalk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Steel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Steel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeMaterial"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthDetection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthDetection"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthEvaluation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthEvaluation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthEvaluation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StructuralImportance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StructuralImportance"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Support -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Support">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SuspensionBridgeStructure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SuspensionBridgeStructure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Symble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Symble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthDetection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperGeneralMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperGeneralMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperLoad-bearingMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperLoad-bearingMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WaterDepthCorrection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WaterDepthCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WingWall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WingWall">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Code_JGJ/T23-2011 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Code_JGJ/T23-2011">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousReboundTest"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousDetection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousDetection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousReboundTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Bad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Bad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BottomSurface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BottomSurface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Dangerous -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Dangerous">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Good -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Good">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SideSurface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SideSurface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#TopSurface -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#TopSurface">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterDetection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterDetection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryBad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryBad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryGood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryGood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-45</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-60</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</BridgeMaintenance:R>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-90</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperLoad-bearingMember"/>
+        <BridgeMaintenance:hasWater rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:isSideSurface rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:Depth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3</BridgeMaintenance:Depth>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</BridgeMaintenance:R>
+        <BridgeMaintenance:Strength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:Strength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperLoad-bearingMember"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:isTopSurface rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:Depth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</BridgeMaintenance:Depth>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</BridgeMaintenance:R>
+        <BridgeMaintenance:Strength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:Strength>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Abutment"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:isSideSurface rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:Depth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.9</BridgeMaintenance:Depth>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</BridgeMaintenance:R>
+        <BridgeMaintenance:Strength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</BridgeMaintenance:Strength>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Foundation"/>
+        <BridgeMaintenance:isBottomSurface rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+        <BridgeMaintenance:isHorizontal rdf:resource="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#false"/>
+        <BridgeMaintenance:Depth rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.8</BridgeMaintenance:Depth>
+        <BridgeMaintenance:R rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</BridgeMaintenance:R>
+        <BridgeMaintenance:Strength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</BridgeMaintenance:Strength>
+        <BridgeMaintenance:α rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-45</BridgeMaintenance:α>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#true"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

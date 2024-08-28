@@ -1,0 +1,84 @@
+@import url("./reset.scss");
+@import url("./common.scss");
+
+:root {
+  --el-menu-item-height: 40px !important;
+  --el-menu-horizontal-height: 40px !important;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app,
+.page-wrap {
+  width: 100%;
+  height: 100%;
+  color: #333;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #ccc;
+}
+/* 滚动条滑块 - 暗黑模式 */
+.dark {
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+  }
+}
+
+// 公共类名
+.radius {
+  border-radius: 10px;
+  // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: var(--el-box-shadow-light);
+}
+
+.shadow {
+  box-shadow: var(--el-box-shadow-light);
+}
+
+.content-inner {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  padding-top: 75px;
+}
+
+.el-input {
+  &.radius-input {
+    .el-input__wrapper {
+      border-radius: 20px !important;
+    }
+  }
+}
+
+.cesium-viewer-toolbar {
+  top: 22px !important;
+  display: none;
+}

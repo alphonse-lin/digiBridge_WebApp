@@ -1,0 +1,2302 @@
+{
+  "settings": {
+    "global": {
+      "zoom": "0.21",
+      "translation": [608.94, 401.77],
+      "paused": false
+    },
+    "gravity": {
+      "classDistance": 200,
+      "datatypeDistance": 120
+    },
+    "modes": {
+      "checkBox": [
+        {
+          "id": "pickandpinModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "nodescalingModuleCheckbox",
+          "checked": true
+        },
+        {
+          "id": "compactnotationModuleCheckbox",
+          "checked": false
+        },
+        {
+          "id": "colorexternalsModuleCheckbox",
+          "checked": true
+        }
+      ],
+      "colorSwitchState": false
+    }
+  },
+  "class": [
+    {
+      "id": "0",
+      "type": "owl:Class"
+    },
+    {
+      "id": "3",
+      "type": "owl:Class"
+    },
+    {
+      "id": "17",
+      "type": "owl:Class"
+    },
+    {
+      "id": "20",
+      "type": "owl:Class"
+    },
+    {
+      "id": "22",
+      "type": "owl:Class"
+    },
+    {
+      "id": "11",
+      "type": "owl:Class"
+    },
+    {
+      "id": "23",
+      "type": "owl:Class"
+    },
+    {
+      "id": "27",
+      "type": "owl:Class"
+    },
+    {
+      "id": "25",
+      "type": "owl:Class"
+    },
+    {
+      "id": "33",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "34",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "38",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "41",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "42",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "43",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "44",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "45",
+      "type": "owl:Class"
+    },
+    {
+      "id": "18",
+      "type": "owl:Class"
+    },
+    {
+      "id": "51",
+      "type": "owl:Class"
+    },
+    {
+      "id": "52",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "53",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "9",
+      "type": "owl:Class"
+    },
+    {
+      "id": "50",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "40",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "37",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "55",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "56",
+      "type": "owl:Class"
+    },
+    {
+      "id": "57",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "58",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "59",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "30",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "62",
+      "type": "owl:Class"
+    },
+    {
+      "id": "4",
+      "type": "owl:Class"
+    },
+    {
+      "id": "6",
+      "type": "owl:Class"
+    },
+    {
+      "id": "10",
+      "type": "owl:Class"
+    },
+    {
+      "id": "1",
+      "type": "owl:Class"
+    },
+    {
+      "id": "73",
+      "type": "owl:Class"
+    },
+    {
+      "id": "72",
+      "type": "owl:Class"
+    },
+    {
+      "id": "92",
+      "type": "owl:Class"
+    },
+    {
+      "id": "5",
+      "type": "owl:Class"
+    },
+    {
+      "id": "8",
+      "type": "owl:Class"
+    },
+    {
+      "id": "47",
+      "type": "owl:Class"
+    },
+    {
+      "id": "121",
+      "type": "owl:Class"
+    },
+    {
+      "id": "122",
+      "type": "owl:Class"
+    },
+    {
+      "id": "75",
+      "type": "owl:Class"
+    },
+    {
+      "id": "16",
+      "type": "owl:Class"
+    },
+    {
+      "id": "28",
+      "type": "owl:Class"
+    },
+    {
+      "id": "21",
+      "type": "owl:Class"
+    },
+    {
+      "id": "48",
+      "type": "owl:Class"
+    },
+    {
+      "id": "127",
+      "type": "owl:Class"
+    },
+    {
+      "id": "77",
+      "type": "owl:Class"
+    },
+    {
+      "id": "46",
+      "type": "owl:Class"
+    },
+    {
+      "id": "15",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "105",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "12",
+      "type": "owl:Class"
+    },
+    {
+      "id": "108",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "111",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "113",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "67",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "116",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "118",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "14",
+      "type": "owl:Thing"
+    },
+    {
+      "id": "101",
+      "type": "rdfs:Literal"
+    },
+    {
+      "id": "63",
+      "type": "owl:Class"
+    },
+    {
+      "id": "71",
+      "type": "owl:Class"
+    },
+    {
+      "id": "2",
+      "type": "owl:Class"
+    },
+    {
+      "id": "7",
+      "type": "owl:Class"
+    },
+    {
+      "id": "24",
+      "type": "owl:Class"
+    }
+  ],
+  "classAttribute": [
+    {
+      "id": "0",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SecondaryComponents",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "SecondaryComponents"
+      },
+      "pos": [1301.8, -271.66]
+    },
+    {
+      "id": "3",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Sidewalk",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Sidewalk"
+      },
+      "pos": [1104.19, -651.17]
+    },
+    {
+      "id": "17",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Steel",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Steel"
+      },
+      "pos": [559.17, -1242.69]
+    },
+    {
+      "id": "20",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ArchBridgeStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "ArchBridgeStructure"
+      },
+      "pos": [1132.87, 1387.66]
+    },
+    {
+      "id": "22",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SuspensionBridgeStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "SuspensionBridgeStructure"
+      },
+      "pos": [1434.05, 1366.97]
+    },
+    {
+      "id": "11",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ExpansionJointsDevice",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "ExpansionJointsDevice"
+      },
+      "pos": [1223.92, -657.23]
+    },
+    {
+      "id": "23",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousReboundTest",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "AnhydrousReboundTest"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AnhydrousDetection",
+          "labels": {
+            "IRI-based": "AnhydrousDetection"
+          }
+        }
+      ],
+      "pos": [2804.72, 355.47]
+    },
+    {
+      "id": "27",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#AngleCorrection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "AngleCorrection"
+      },
+      "pos": [2291.14, 1384.88]
+    },
+    {
+      "id": "25",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Code_JGJ/T23-2011",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Code_JGJ/T23-2011"
+      },
+      "pos": [2770.06, -20.95]
+    },
+    {
+      "id": "33",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-564.59, 654.6]
+    },
+    {
+      "id": "34",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-546.6, 1054.71]
+    },
+    {
+      "id": "38",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [137.38, 1033.04]
+    },
+    {
+      "id": "41",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-307.4, 1243.79]
+    },
+    {
+      "id": "42",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [33.76, 1176.2]
+    },
+    {
+      "id": "43",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-481.62, 1143.53]
+    },
+    {
+      "id": "44",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-376.72, 452.66]
+    },
+    {
+      "id": "45",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Support",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Support"
+      },
+      "pos": [2205.99, 113.68]
+    },
+    {
+      "id": "18",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeMaterial",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "BridgeMaterial"
+      },
+      "pos": [872.78, -1406.51]
+    },
+    {
+      "id": "51",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WaterDepthCorrection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "WaterDepthCorrection"
+      },
+      "pos": [2633.1, 1519.59]
+    },
+    {
+      "id": "52",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [52.54, 545.84]
+    },
+    {
+      "id": "53",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [173.26, 842.08]
+    },
+    {
+      "id": "9",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Symble",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Symble"
+      },
+      "pos": [889.84, -535.09]
+    },
+    {
+      "id": "50",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-26.58, 483.6]
+    },
+    {
+      "id": "40",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [162.61, 942.06]
+    },
+    {
+      "id": "37",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-603.25, 845.72]
+    },
+    {
+      "id": "55",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [116.18, 632.19]
+    },
+    {
+      "id": "56",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CompressionTest",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "CompressionTest"
+      },
+      "pos": [2574.72, 801.25]
+    },
+    {
+      "id": "57",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-581.21, 950.33]
+    },
+    {
+      "id": "58",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [153.23, 735.19]
+    },
+    {
+      "id": "59",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-112.24, 441.5]
+    },
+    {
+      "id": "30",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-122.6, 1252.93]
+    },
+    {
+      "id": "62",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BeamBridgeStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "BeamBridgeStructure"
+      },
+      "pos": [1252.91, 382.82]
+    },
+    {
+      "id": "4",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pavement",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Pavement"
+      },
+      "pos": [1351.99, -624.35]
+    },
+    {
+      "id": "6",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Handrail",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Handrail"
+      },
+      "pos": [990.81, -611.16]
+    },
+    {
+      "id": "10",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#ConicalSlope",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "ConicalSlope"
+      },
+      "pos": [1441.63, 121.86]
+    },
+    {
+      "id": "1",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StructuralImportance",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "StructuralImportance"
+      },
+      "pos": [1746.19, -10.95]
+    },
+    {
+      "id": "73",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PouringSurfaceCorrection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "PouringSurfaceCorrection"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#SideSurface",
+          "labels": {
+            "IRI-based": "SideSurface"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#TopSurface",
+          "labels": {
+            "IRI-based": "TopSurface"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BottomSurface",
+          "labels": {
+            "IRI-based": "BottomSurface"
+          }
+        }
+      ],
+      "pos": [2410.31, 1512.79]
+    },
+    {
+      "id": "72",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthEvaluation",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "StrengthEvaluation"
+      },
+      "pos": [1040.41, 2258.63]
+    },
+    {
+      "id": "92",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Foundation",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Foundation"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab4",
+          "labels": {
+            "IRI-based": "slab4"
+          }
+        }
+      ],
+      "pos": [1913.35, 823.89]
+    },
+    {
+      "id": "5",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Riverbed",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Riverbed"
+      },
+      "pos": [1329.47, 162.15]
+    },
+    {
+      "id": "8",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#DrainageSystem",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "DrainageSystem"
+      },
+      "pos": [810.82, -404.29]
+    },
+    {
+      "id": "47",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Superstructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Superstructure"
+      },
+      "pos": [1778.67, 107.08]
+    },
+    {
+      "id": "121",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Pier",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Pier"
+      },
+      "pos": [1768.9, 833.88]
+    },
+    {
+      "id": "122",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Abutment",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Abutment"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab3",
+          "labels": {
+            "IRI-based": "slab3"
+          }
+        }
+      ],
+      "pos": [1841.06, 859.3]
+    },
+    {
+      "id": "75",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#EvaluationScale",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "EvaluationScale"
+      },
+      "pos": [1376.46, 2334.85]
+    },
+    {
+      "id": "16",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeDeckSystem",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "BridgeDeckSystem"
+      },
+      "pos": [1079.41, -227.3]
+    },
+    {
+      "id": "28",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterReboundTest",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "UnderwaterReboundTest"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UnderwaterDetection",
+          "labels": {
+            "IRI-based": "UnderwaterDetection"
+          }
+        }
+      ],
+      "pos": [2596.44, 1154.97]
+    },
+    {
+      "id": "21",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#BridgeStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "BridgeStructure"
+      },
+      "pos": [1253.29, 1003.86]
+    },
+    {
+      "id": "48",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Concrete",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Concrete"
+      },
+      "pos": [531.9, -1466.01]
+    },
+    {
+      "id": "127",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#CableStayedBridgeStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "CableStayedBridgeStructure"
+      },
+      "pos": [1287.79, 1412.89]
+    },
+    {
+      "id": "77",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperLoad-bearingMember",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "UpperLoad-bearingMember"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab1",
+          "labels": {
+            "IRI-based": "slab1"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#slab2",
+          "labels": {
+            "IRI-based": "slab2"
+          }
+        }
+      ],
+      "pos": [2170.83, 22.26]
+    },
+    {
+      "id": "46",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#PrimaryComponents",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "PrimaryComponents"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case5",
+          "labels": {
+            "IRI-based": "case5"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-2",
+          "labels": {
+            "IRI-based": "case1-2"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case6",
+          "labels": {
+            "IRI-based": "case6"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case3",
+          "labels": {
+            "IRI-based": "case3"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case4",
+          "labels": {
+            "IRI-based": "case4"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1",
+          "labels": {
+            "IRI-based": "case1"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case2",
+          "labels": {
+            "IRI-based": "case2"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-5",
+          "labels": {
+            "IRI-based": "case1-5"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case7",
+          "labels": {
+            "IRI-based": "case7"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-4",
+          "labels": {
+            "IRI-based": "case1-4"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case1-3",
+          "labels": {
+            "IRI-based": "case1-3"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#case8",
+          "labels": {
+            "IRI-based": "case8"
+          }
+        }
+      ],
+      "pos": [2021.79, 446.21]
+    },
+    {
+      "id": "15",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-289.08, 428.41]
+    },
+    {
+      "id": "105",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [95.88, 1113.79]
+    },
+    {
+      "id": "12",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#UpperGeneralMember",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "UpperGeneralMember"
+      },
+      "pos": [1729.71, -316.13]
+    },
+    {
+      "id": "108",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-214.03, 1259.79]
+    },
+    {
+      "id": "111",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-203.45, 422.17]
+    },
+    {
+      "id": "113",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-519.58, 571.76]
+    },
+    {
+      "id": "67",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-398.23, 1206]
+    },
+    {
+      "id": "116",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-39.83, 1220.72]
+    },
+    {
+      "id": "118",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-454.51, 500.63]
+    },
+    {
+      "id": "14",
+      "iri": "http://www.w3.org/2002/07/owl#Thing",
+      "baseIri": "http://owl2vowl.de",
+      "label": {
+        "undefined": "Thing"
+      },
+      "pos": [-212.72, 842.39]
+    },
+    {
+      "id": "101",
+      "iri": "http://www.w3.org/2000/01/rdf-schema#Literal",
+      "label": "Literal",
+      "attributes": ["datatype"],
+      "pos": [-588.58, 748.18]
+    },
+    {
+      "id": "63",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Substructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Substructure"
+      },
+      "pos": [1555.75, 531.49]
+    },
+    {
+      "id": "71",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthStatus",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "StrengthStatus"
+      },
+      "individuals": [
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Bad",
+          "labels": {
+            "IRI-based": "Bad"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Dangerous",
+          "labels": {
+            "IRI-based": "Dangerous"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryBad",
+          "labels": {
+            "IRI-based": "VeryBad"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#VeryGood",
+          "labels": {
+            "IRI-based": "VeryGood"
+          }
+        },
+        {
+          "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Good",
+          "labels": {
+            "IRI-based": "Good"
+          }
+        }
+      ],
+      "pos": [1363.21, 2088.67]
+    },
+    {
+      "id": "2",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#RegulatingStructure",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "RegulatingStructure"
+      },
+      "pos": [1556.4, 85.24]
+    },
+    {
+      "id": "7",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#WingWall",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "WingWall"
+      },
+      "pos": [1239.08, 198.36]
+    },
+    {
+      "id": "24",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#StrengthDetection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "StrengthDetection"
+      },
+      "pos": [2763.13, 758.01]
+    }
+  ],
+  "property": [
+    {
+      "id": "13",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "19",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "26",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "29",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "31",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "32",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "35",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "36",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "39",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "49",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "54",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "60",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "61",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "64",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "65",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "66",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "68",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "69",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "70",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "74",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "76",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "78",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "79",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "80",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "81",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "82",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "83",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "84",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "85",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "86",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "87",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "88",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "89",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "90",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "91",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "93",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "94",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "95",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "96",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "97",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "98",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "99",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "100",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "102",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "103",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "104",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "106",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "107",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "109",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "110",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "112",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "114",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "115",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "117",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "119",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "120",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "123",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "124",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "125",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "126",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "128",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "129",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "130",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "131",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "132",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "133",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "134",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "135",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "136",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "137",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "138",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "139",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "140",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "141",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "142",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "143",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "144",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "145",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "146",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "147",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "148",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "149",
+      "type": "owl:DatatypeProperty"
+    },
+    {
+      "id": "150",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "151",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "152",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "153",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "154",
+      "type": "owl:ObjectProperty"
+    },
+    {
+      "id": "155",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "156",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "157",
+      "type": "rdfs:subClassOf"
+    },
+    {
+      "id": "158",
+      "type": "rdfs:subClassOf"
+    }
+  ],
+  "propertyAttribute": [
+    {
+      "id": "13",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcuk",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "fcuk"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "15",
+      "pos": [-252.7, 625.65]
+    },
+    {
+      "id": "19",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "5",
+      "range": "0",
+      "pos": [1315.63, -54.76]
+    },
+    {
+      "id": "26",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSecondary",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isSecondary"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-294.45, 701.44]
+    },
+    {
+      "id": "29",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rab",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rab"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "30",
+      "pos": [-165.54, 1057.31]
+    },
+    {
+      "id": "31",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "4",
+      "range": "0",
+      "pos": [1326.89, -448.01]
+    },
+    {
+      "id": "32",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "3",
+      "range": "0",
+      "pos": [1202.99, -461.42]
+    },
+    {
+      "id": "35",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "2",
+      "range": "0",
+      "pos": [1429.1, -93.21]
+    },
+    {
+      "id": "36",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#fcue",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "fcue"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "37",
+      "pos": [-409.73, 844.07]
+    },
+    {
+      "id": "39",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rah",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rah"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "40",
+      "pos": [-23.81, 892.56]
+    },
+    {
+      "id": "49",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnα",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rnα"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "50",
+      "pos": [-115.34, 654.68]
+    },
+    {
+      "id": "54",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Kbt",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Kbt"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "33",
+      "pos": [-392.52, 746.43]
+    },
+    {
+      "id": "60",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasAngleCorrection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasAngleCorrection"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-346.87, 750.13]
+    },
+    {
+      "id": "61",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "12",
+      "range": "47",
+      "pos": [1754.19, -104.52]
+    },
+    {
+      "id": "64",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "4",
+      "range": "16",
+      "pos": [1215.7, -425.82]
+    },
+    {
+      "id": "65",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "3",
+      "range": "16",
+      "pos": [1091.8, -439.23]
+    },
+    {
+      "id": "66",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rα",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rα"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "67",
+      "pos": [-309.74, 1032.56]
+    },
+    {
+      "id": "68",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasWater",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasWater"
+      },
+      "domain": "14",
+      "range": "14",
+      "pos": [-52.12, 815.85]
+    },
+    {
+      "id": "69",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#α",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "α"
+      },
+      "attributes": ["datatype"],
+      "comment": {
+        "undefined": "检测角度（±30,45,60,90）"
+      },
+      "domain": "14",
+      "range": "59",
+      "pos": [-160.09, 632.39]
+    },
+    {
+      "id": "70",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "71",
+      "range": "72",
+      "pos": [1193.26, 2178.16]
+    },
+    {
+      "id": "74",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "75",
+      "range": "72",
+      "pos": [1208.43, 2296.74]
+    },
+    {
+      "id": "76",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "77",
+      "range": "47",
+      "pos": [1968.01, 66.13]
+    },
+    {
+      "id": "78",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "45",
+      "range": "47",
+      "pos": [1992.33, 110.38]
+    },
+    {
+      "id": "79",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "47",
+      "range": "62",
+      "pos": [1515.79, 244.95]
+    },
+    {
+      "id": "80",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "63",
+      "range": "62",
+      "pos": [1404.33, 457.15]
+    },
+    {
+      "id": "81",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "46",
+      "range": "1",
+      "pos": [1877.4, 206.7]
+    },
+    {
+      "id": "82",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "0",
+      "range": "1",
+      "pos": [1523.99, -141.3]
+    },
+    {
+      "id": "83",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnb",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rnb"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "55",
+      "pos": [-43.45, 734.21]
+    },
+    {
+      "id": "84",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "16",
+      "range": "62",
+      "pos": [1166.16, 77.76]
+    },
+    {
+      "id": "85",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "48",
+      "range": "18",
+      "pos": [702.34, -1436.26]
+    },
+    {
+      "id": "86",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isBottomSurface",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isBottomSurface"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-145.81, 693.38]
+    },
+    {
+      "id": "87",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "17",
+      "range": "18",
+      "pos": [715.97, -1324.6]
+    },
+    {
+      "id": "88",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Depth",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Depth"
+      },
+      "attributes": ["datatype"],
+      "comment": {
+        "undefined": "检测水深（0-10m）"
+      },
+      "domain": "14",
+      "range": "43",
+      "pos": [-352.7, 999.15]
+    },
+    {
+      "id": "89",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "11",
+      "range": "0",
+      "pos": [1262.86, -464.45]
+    },
+    {
+      "id": "90",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "10",
+      "range": "0",
+      "pos": [1371.72, -74.9]
+    },
+    {
+      "id": "91",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "25",
+      "range": "23",
+      "pos": [2786.91, 162.01]
+    },
+    {
+      "id": "93",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "12",
+      "range": "0",
+      "pos": [1515.76, -293.89]
+    },
+    {
+      "id": "94",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "7",
+      "range": "0",
+      "pos": [1270.44, -36.65]
+    },
+    {
+      "id": "95",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "6",
+      "range": "0",
+      "pos": [1146.3, -441.41]
+    },
+    {
+      "id": "96",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "9",
+      "range": "0",
+      "pos": [1095.82, -403.38]
+    },
+    {
+      "id": "97",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthDetection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasStrengthDetection"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-323.81, 964.26]
+    },
+    {
+      "id": "98",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rnt",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rnt"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "38",
+      "pos": [-33.68, 939.89]
+    },
+    {
+      "id": "99",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "8",
+      "range": "0",
+      "pos": [1056.31, -337.98]
+    },
+    {
+      "id": "100",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#d",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "d"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "101",
+      "pos": [-401.95, 794.96]
+    },
+    {
+      "id": "102",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "7",
+      "range": "63",
+      "pos": [1397.41, 364.93]
+    },
+    {
+      "id": "103",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthEvaluation",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasStrengthEvaluation"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-374.54, 838.42]
+    },
+    {
+      "id": "104",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#c",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "c"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "105",
+      "pos": [-52.84, 983]
+    },
+    {
+      "id": "106",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "5",
+      "range": "63",
+      "pos": [1442.61, 346.82]
+    },
+    {
+      "id": "107",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#f",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "f"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "108",
+      "pos": [-213.41, 1061.09]
+    },
+    {
+      "id": "109",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "92",
+      "range": "63",
+      "pos": [1730.47, 674.35]
+    },
+    {
+      "id": "110",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#level",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "level"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "111",
+      "pos": [-207.86, 622.28]
+    },
+    {
+      "id": "112",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#e",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "e"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "113",
+      "pos": [-371.73, 702.15]
+    },
+    {
+      "id": "114",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "10",
+      "range": "63",
+      "pos": [1498.69, 326.67]
+    },
+    {
+      "id": "115",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rt",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rt"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "116",
+      "pos": [-122.33, 1040.2]
+    },
+    {
+      "id": "117",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#b",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "b"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "118",
+      "pos": [-338.74, 664.27]
+    },
+    {
+      "id": "119",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "2",
+      "range": "63",
+      "pos": [1556.08, 308.36]
+    },
+    {
+      "id": "120",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#a",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "a"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "58",
+      "pos": [-28.6, 788.46]
+    },
+    {
+      "id": "123",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "122",
+      "range": "46",
+      "pos": [1928.42, 659.61]
+    },
+    {
+      "id": "124",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "121",
+      "range": "46",
+      "pos": [1888.37, 650.73]
+    },
+    {
+      "id": "125",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "45",
+      "range": "46",
+      "pos": [2120.07, 268.78]
+    },
+    {
+      "id": "126",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "127",
+      "range": "21",
+      "pos": [1270.54, 1208.38]
+    },
+    {
+      "id": "128",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "92",
+      "range": "46",
+      "pos": [1965.51, 642.25]
+    },
+    {
+      "id": "129",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "77",
+      "range": "46",
+      "pos": [2098.25, 228.7]
+    },
+    {
+      "id": "130",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "62",
+      "range": "21",
+      "pos": [1253.1, 693.34]
+    },
+    {
+      "id": "131",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasSurfaceCorrection",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasSurfaceCorrection"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-268.5, 996.79]
+    },
+    {
+      "id": "132",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "27",
+      "range": "28",
+      "pos": [2439.58, 1273.1]
+    },
+    {
+      "id": "133",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "22",
+      "range": "21",
+      "pos": [1343.67, 1185.42]
+    },
+    {
+      "id": "134",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "20",
+      "range": "21",
+      "pos": [1193.08, 1195.76]
+    },
+    {
+      "id": "135",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Raα",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Raα"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "53",
+      "pos": [-17.98, 842.23]
+    },
+    {
+      "id": "136",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rh",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rh"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "42",
+      "pos": [-84.26, 1016.36]
+    },
+    {
+      "id": "137",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rb",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rb"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "41",
+      "pos": [-262.32, 1052.69]
+    },
+    {
+      "id": "138",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#R",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "R"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "44",
+      "pos": [-298.43, 638.7]
+    },
+    {
+      "id": "139",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rn",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rn"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "34",
+      "pos": [-384.45, 951.6]
+    },
+    {
+      "id": "140",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "73",
+      "range": "28",
+      "pos": [2504.65, 1331.42]
+    },
+    {
+      "id": "141",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "51",
+      "range": "28",
+      "pos": [2615.3, 1342.52]
+    },
+    {
+      "id": "142",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "56",
+      "range": "28",
+      "pos": [2585.25, 972.85]
+    },
+    {
+      "id": "143",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "8",
+      "range": "16",
+      "pos": [945.11, -315.79]
+    },
+    {
+      "id": "144",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "6",
+      "range": "16",
+      "pos": [1035.11, -419.23]
+    },
+    {
+      "id": "145",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "11",
+      "range": "16",
+      "pos": [1151.66, -442.26]
+    },
+    {
+      "id": "146",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "9",
+      "range": "16",
+      "pos": [984.62, -381.2]
+    },
+    {
+      "id": "147",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isSideSurface",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isSideSurface"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-221.49, 679.73]
+    },
+    {
+      "id": "148",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Rat",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Rat"
+      },
+      "attributes": ["datatype"],
+      "domain": "14",
+      "range": "57",
+      "pos": [-398.11, 896.7]
+    },
+    {
+      "id": "149",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#Strength",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "Strength"
+      },
+      "attributes": ["datatype"],
+      "comment": {
+        "undefined": "原构件的混凝土强度等级（C30,C40,C50）"
+      },
+      "domain": "14",
+      "range": "52",
+      "pos": [-74.56, 687.94]
+    },
+    {
+      "id": "150",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isHorizontal",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isHorizontal"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-361.08, 913.16]
+    },
+    {
+      "id": "151",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isTopSurface",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isTopSurface"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-193.62, 1002.96]
+    },
+    {
+      "id": "152",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#isPrimary",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "isPrimary"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-117.96, 972.99]
+    },
+    {
+      "id": "153",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasMaterial",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasMaterial"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-86.13, 738.93]
+    },
+    {
+      "id": "154",
+      "iri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance#hasStrengthStatus",
+      "baseIri": "http://www.semanticweb.org/dell/ontologies/BridgeMaintenance",
+      "label": {
+        "IRI-based": "hasStrengthStatus"
+      },
+      "attributes": ["object"],
+      "domain": "14",
+      "range": "14",
+      "pos": [-65.11, 905.55]
+    },
+    {
+      "id": "155",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "122",
+      "range": "63",
+      "pos": [1694.94, 691.41]
+    },
+    {
+      "id": "156",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "121",
+      "range": "63",
+      "pos": [1662.32, 682.68]
+    },
+    {
+      "id": "157",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "23",
+      "range": "24",
+      "pos": [2783.39, 561.99]
+    },
+    {
+      "id": "158",
+      "label": "Subclass of",
+      "attributes": ["anonymous", "object"],
+      "domain": "28",
+      "range": "24",
+      "pos": [2681.83, 951.63]
+    }
+  ]
+}
