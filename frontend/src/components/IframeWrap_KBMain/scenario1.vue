@@ -91,41 +91,66 @@ export default {
     }
   },
   methods: {
-    runAutoloadReasoner() {
-      // 这里应该是调用后端API的逻辑
-      this.autoloadResult = [
-        `Corrosion depth: ${this.autoloadDepth}mm`,
-        `Corrosion percentage: ${this.autoloadPercentage}%`,
-        'Severity rating: High',
-        'Extent rating: Widespread'
-      ]
+    async makeRequest(endpoint, data) {
+      try {
+        const response = await fetch(`/api${endpoint}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        return await response.json()
+      } catch (error) {
+        console.error(`Error in ${endpoint}:`, error)
+        return { error: error.message }
+      }
     },
-    handleFileUpload(event) {
+    async runAutoloadReasoner() {
+      const result = await this.makeRequest('/ow_process_corrosionAuto', {
+        depth: this.autoloadDepth,
+        percentage: this.autoloadPercentage
+      })
+      this.autoloadResult = result.data || [result.error]
+    },
+    async handleFileUpload(event) {
       const file = event.target.files[0]
-      const reader = new FileReader()
-      reader.onload = (e) => {
-        this.fileContent = JSON.parse(e.target.result)
+      const formData = new FormData()
+      formData.append('file', file)
+
+      try {
+        const response = await fetch('/api/ow_upload', {
+          method: 'POST',
+          body: formData
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        this.fileContent = await response.json()
+      } catch (error) {
+        console.error('Error uploading file:', error)
+        this.fileContent = { error: error.message }
       }
-      reader.readAsText(file)
     },
-    runFileReasoner() {
+    async runFileReasoner() {
       if (this.fileContent) {
-        // 这里应该是处理文件内容的逻辑
-        this.fileResult = [
-          'File processed successfully',
-          'Severity rating: Medium',
-          'Extent rating: Localized'
-        ]
+        const result = await this.makeRequest('/ow_process_corrosion', this.fileContent)
+        this.fileResult = result.data || [result.error]
       }
     },
-    runUserInputReasoner() {
-      // 这里应该是调用后端API的逻辑
-      this.userInputResult = [
-        `Corrosion depth: ${this.userInputDepth}mm`,
-        `Corrosion percentage: ${this.userInputPercentage}%`,
-        'Severity rating: Low',
-        'Extent rating: Minimal'
-      ]
+    async runUserInputReasoner() {
+      const result = await this.makeRequest('/ow_process_corrosion', {
+        depth: this.userInputDepth,
+        percentage: this.userInputPercentage
+      })
+      this.userInputResult = result.data || [result.error]
     }
   },
   mounted() {

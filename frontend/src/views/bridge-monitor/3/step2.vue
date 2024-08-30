@@ -31,6 +31,10 @@ import { ref, defineExpose } from 'vue'
 import { ElImage, ElIcon } from 'element-plus'
 import { Picture as IconPicture } from '@element-plus/icons-vue'
 
+const props = defineProps({
+  result: Object
+})
+
 const images = ref([
   { url: '/segments/20240807-200015/cutout_0.png', selected: true },
   { url: '/segments/20240807-200015/cutout_1.png', selected: true },
@@ -54,6 +58,12 @@ const images = ref([
   { url: '/segments/20240807-200015/cutout_19.png', selected: true },
   { url: '/segments/20240807-200015/cutout_20.png', selected: true },
 ])
+
+watch(() => props.result, (newResult) => {
+  if (newResult && newResult.segmented_images) {
+    images.value = newResult.segmented_images.map(url => ({ url, selected: true }))
+  }
+}, { immediate: true })
 
 const updateSelection = (index) => {
   console.log(`Image ${index + 1} selection changed to ${images.value[index].selected}`)

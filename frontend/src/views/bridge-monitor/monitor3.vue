@@ -59,6 +59,7 @@ import { Close, Document } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import Bus from '@/utils/bus'
 import { bridges } from '@/api'
+import { segmentImage, quantifyImages } from '@/api/bridge'
 
 const refStep2 = ref(null)
 const selectedImages = ref([])
@@ -135,12 +136,38 @@ async function onNext() {
   if (activeStep.value === 0) {
     const validateResult = await refStep1.value.validateForm()
     if (!validateResult) return
-    await uploadImage()
-    await getResult()
+    loading.value = true
+    try {
+      const imgs = refStep1.value.getImgs()
+      const formData = new FormData()
+      imgs.forEach(img => {
+        formData.append('file', img.raw)
+      })
+      const response = await segmentImage(formData)
+      result.value = response.data
+    } catch (error) {
+      console.error('Error segmenting image:', error)
+      ElMessage.error('Failed to segment image')
+      return
+    } finally {
+      loading.value = false
+    }
   } else if (activeStep.value === 1) {
-    // 可以在这里添加 Step2 的任何验证逻辑
     selectedImages.value = refStep2.value.getSelectedImages()
-    console.log('selectedImages', selectedImages.value)
+    loading.value = true
+    try {
+      const response = await quantifyImages({
+        selected_images: selectedImages.value,
+        question_type: questionType.value
+      })
+      result.value = response.data
+    } catch (error) {
+      console.error('Error quantifying images:', error)
+      ElMessage.error('Failed to quantify images')
+      return
+    } finally {
+      loading.value = false
+    }
   }
 
   if (activeStep.value < 2) {  // 修改这里，允许从 Step2 跳转到 Step3

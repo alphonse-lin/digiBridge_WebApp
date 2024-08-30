@@ -2,10 +2,8 @@
   <div>
     <h1>Automated Bridge Maintenance Strategy Generation</h1>
     <h2>System Architecture</h2>
-    <img src="/imgs/autoMSG/framework.png"
-         alt="System Architecture Diagram"
-         class="system-diagram"
-         width="50%" style="display: block; margin: auto; width: 50%;">
+    <img src="/imgs/autoMSG/framework.png" alt="System Architecture Diagram" class="system-diagram" width="50%"
+      style="display: block; margin: auto; width: 50%;">
     <p>This microservice is driven by a multi-model neural network model, which is trained by the data from CGR. The
       backend model learns the knowledge from both the image of damage and the solution provided by experts. This model
       has the ability of self-learning
@@ -15,10 +13,8 @@
       images of defect and the corresponding maintenance solutions are extracted through a pre-processing algorithm and
       used as the input data
       to train the neural network model.</p>
-    <img src="/imgs/autoMSG/table.png"
-         alt="dataset-preview"
-         class="dataset-preview"
-         width="50%" style="display: block; margin: auto; width: 50%;" >
+    <img src="/imgs/autoMSG/table.png" alt="dataset-preview" class="dataset-preview" width="50%"
+      style="display: block; margin: auto; width: 50%;">
     <!-- <div class="dataset-preview">
         <table>
             <tr>
@@ -44,35 +40,38 @@
     <h2>Demo</h2>
     <p>Upload your image of damage</p>
     <div class="file-upload">
-      <div id="drop-zone"
-           class="drop-zone">
-        <input type="file"
-               id="file-input"
-               class="file-input"
-               accept="image/*">
+      <div id="drop-zone" class="drop-zone">
+        <input type="file" id="file-input" class="file-input" accept="image/*">
         <div class="icon-text">
-          <svg xmlns="http://www.w3.org/2000/svg"
-               width="24"
-               height="24"
-               viewBox="0 0 24 24"
-               fill="none"
-               stroke="currentColor"
-               stroke-width="2"
-               stroke-linecap="round"
-               stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="17 8 12 3 7 8"></polyline>
-            <line x1="12"
-                  y1="3"
-                  x2="12"
-                  y2="15"></line>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
           <span>Drag and drop file here</span>
         </div>
         <p class="file-size-limit">Limit 20MB per file</p>
       </div>
-      <button id="browse-button"
-              class="browse-button">Browse files</button>
+      <button id="browse-button" class="browse-button">Browse files</button>
+    </div>
+
+    <div v-if="results.length > 0" class="results-container">
+      <h3>Results:</h3>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th>Predicted Solution</th>
+            <th>Ground Truth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(result, index) in results" :key="index">
+            <td>{{ result.predictedSolution }}</td>
+            <td>{{ result.groundTruth }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -80,7 +79,14 @@
 <script>
 export default {
   name: 'AutomatedMaintenance',
-  mounted () {
+  data() {
+    return {
+      results: [],
+      predictedSolution: '',
+      groundTruth: ''
+    }
+  },
+  mounted() {
     const dropZone = document.getElementById('drop-zone')
     const fileInput = document.getElementById('file-input')
     const browseButton = document.getElementById('browse-button');
@@ -109,48 +115,52 @@ export default {
     })
   },
   methods: {
-    preventDefaults (e) {
+    preventDefaults(e) {
       e.preventDefault()
       e.stopPropagation()
     },
-    highlight () {
+    highlight() {
       const dropZone = document.getElementById('drop-zone')
       dropZone.classList.add('active')
     },
-    unhighlight () {
+    unhighlight() {
       const dropZone = document.getElementById('drop-zone')
       dropZone.classList.remove('active')
     },
-    handleDrop (e) {
+    handleDrop(e) {
       const dt = e.dataTransfer
       const files = dt.files
       this.handleFiles(files)
     },
-    handleFiles (files) {
+    handleFiles(files) {
       if (files.length) {
         console.log('File selected:', files[0].name)
-        // Here you would typically send the file to a server
-        // For example:
-        // this.uploadFile(files[0]);
+        this.uploadFile(files[0])
       }
-    }
-    // Function to upload file (to be implemented based on your backend)
-    // uploadFile(file) {
-    //     const formData = new FormData();
-    //     formData.append('file', file);
-    //
-    //     fetch('/upload', {
-    //         method: 'POST',
-    //         body: formData
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log('Success:', data);
-    //     })
-    //     .catch(error => {
-    //         console.error('Error:', error);
-    //     });
-    // }
+    },
+    async uploadFile(file) {
+      const formData = new FormData()
+      formData.append('image', file)
+
+      try {
+        const response = await fetch('/api/am_generate_solution', {
+          method: 'POST',
+          body: formData
+        })
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const data = await response.json()
+        this.predictedSolution = data.predicted_solution
+        this.groundTruth = data.ground_truth || 'Not available'
+
+        console.log('Success:', data)
+      } catch (error) {
+        console.error('Error:', error)
+      }
+    },
   }
 }
 </script>

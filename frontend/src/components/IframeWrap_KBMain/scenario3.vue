@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import { processCrackOnMasonry } from '@/api/bridge'
+
 export default {
   name: 'Scenario3',
   data() {
@@ -62,15 +64,19 @@ export default {
     }
   },
   methods: {
-    processInput() {
-      // Here you would typically call an API or use a more complex logic
-      // For demonstration, we'll just push a simple result
-      this.reasoningResult = [
-        `Crack Location: ${this.crackLocation}`,
-        `Crack Type: ${this.crackType}`,
-        `Crack Width: ${this.crackWidth}mm`,
-        `Crack Length: ${this.crackLength}% of Principal Dimension`
-      ]
+    async processInput() {
+      try {
+        const result = await processCrackOnMasonry({
+          location: this.crackLocation,
+          type: this.crackType,
+          width: this.crackWidth,
+          length: this.crackLength
+        })
+        this.reasoningResult = result.data || [result.error]
+      } catch (error) {
+        console.error('Error in processInput:', error)
+        this.reasoningResult = [error.message]
+      }
     }
   }
 }

@@ -33,6 +33,8 @@
 </template>
 
 <script>
+import { processCoatingDefect } from '@/api/bridge'
+
 export default {
   name: 'Scenario2',
   data() {
@@ -43,10 +45,17 @@ export default {
     }
   },
   methods: {
-    processInput() {
-      // Here you would typically call an API or use a more complex logic
-      // For demonstration, we'll just push a simple result
-      this.reasoningResult = [`Option selected: ${this.selectedOption}`, `Defect percentage: ${this.defectPercentage}%`]
+    async processInput() {
+      try {
+        const result = await processCoatingDefect({
+          option: this.selectedOption,
+          percentage: this.defectPercentage
+        })
+        this.reasoningResult = result.data || [result.error]
+      } catch (error) {
+        console.error('Error in processInput:', error)
+        this.reasoningResult = [error.message]
+      }
     }
   },
   mounted() {

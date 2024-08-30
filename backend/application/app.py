@@ -58,13 +58,27 @@ def ow_process_crackOnReinforcedConcrete():
 # region imageProcessing
 @app.route('/ip_segment_image', methods=['POST'])
 def ip_segment_image():
-    json = segment_image()
-    return json
+    # 假设前端发送的是图片文件
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+    if file:
+        # 这里应该是您的图像分割逻辑
+        # 为了示例，我们假设它返回一个包含分割后图片URL的列表
+        segmented_images = segment_image(file)
+        return jsonify({'segmented_images': segmented_images})
 
 @app.route('/ip_quantifiaction', methods=['POST'])
-def ip_quantifiaction(file_path):
-    json = quantifiaction(file_path)
-    return json
+def ip_quantifiaction():
+    data = request.json
+    selected_images = data.get('selected_images', [])
+    question_type = data.get('question_type', '')
+    # 这里应该是您的量化逻辑
+    # 为了示例，我们假设它返回一个包含量化结果的字典
+    quantification_result = quantifiaction(selected_images, question_type)
+    return jsonify(quantification_result)
 # endregion
 
 if __name__ == '__main__':

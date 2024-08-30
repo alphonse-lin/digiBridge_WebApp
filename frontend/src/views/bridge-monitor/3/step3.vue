@@ -79,6 +79,27 @@ const selectedImagesArray = computed(() => {
   return Object.values(props.selectedImages || {})
 })
 
+const corrosionAssessment = computed(() => {
+  if (!props.result) return {}
+  return {
+    goodPercentage: { label: 'Good percentage', type: 'progress', value: props.result.goodPercentage, status: getStatus(props.result.goodPercentage) },
+    mildCorrosion: { label: 'Mild corrosion percentage', type: 'progress', value: props.result.mildCorrosion, status: getStatus(props.result.mildCorrosion) },
+    severeCorrosion: { label: 'Severe corrosion percentage', type: 'progress', value: props.result.severeCorrosion, status: getStatus(props.result.severeCorrosion) },
+    totalCorrosion: { label: 'Total corrosion percentage', type: 'progress', value: props.result.totalCorrosion, status: getStatus(props.result.totalCorrosion) },
+    predictedSolution: { label: 'Predicted solution', type: 'text', value: props.result.predictedSolution },
+    groundTruth: { label: 'Ground truth', type: 'text', value: props.result.groundTruth }
+  }
+})
+
+const crackAssessment = computed(() => {
+  if (!props.result) return {}
+  return {
+    crackNumber: { label: 'Crack number', type: 'progress', value: props.result.crackNumber, status: getStatus(props.result.crackNumber) },
+    crackLength: { label: 'Crack length', type: 'progress', value: props.result.crackLength, status: getStatus(props.result.crackLength), unit: 'm' },
+    crackDepth: { label: 'Crack depth', type: 'progress', value: props.result.crackDepth, status: getStatus(props.result.crackDepth), unit: 'cm' },
+    predictedSolution: { label: 'Predicted solution', type: 'text', value: props.result.predictedSolution }
+  }
+})
 
 function getRandomCorrosionAssessment() {
   const goodPercentage = Math.random() * 100
