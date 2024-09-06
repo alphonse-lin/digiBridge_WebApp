@@ -1,9 +1,8 @@
 import axios from 'axios'
 
 const service = axios.create({
-    baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
-    timeout: 5000 // request timeout
-})
+    baseURL: 'http://localhost:5000',
+});
 
 // 请求拦截器
 service.interceptors.request.use(
@@ -21,22 +20,22 @@ service.interceptors.request.use(
 // 响应拦截器
 service.interceptors.response.use(
     response => {
-        const res = response.data
-            // 根据自定义错误码判断请求是否成功
-        if (res.code !== 20000) {
-            // 处理错误
-            return Promise.reject(new Error(res.message || 'Error'))
-        } else {
-            return res
-        }
+        // 直接返回响应数据，不进行额外的检查
+        return response.data
     },
     error => {
-        console.log('err' + error) // for debug
-        ElMessage({
-            message: error.message,
-            type: 'error',
-            duration: 5 * 1000
-        })
+        console.log('err' + error)
+            // 检查错误响应是否包含我们期望的数据格式
+        if (error.response && error.response.data && typeof error.response.data === 'string' && error.response.data.includes('severity rating')) {
+            // 如果是我们期望的数据格式，直接返回数据
+            return error.response.data
+        }
+        // // 否则，显示错误消息
+        // ElMessage({
+        //     message: error.message,
+        //     type: 'error',
+        //     duration: 5 * 1000
+        // })
         return Promise.reject(error)
     }
 )

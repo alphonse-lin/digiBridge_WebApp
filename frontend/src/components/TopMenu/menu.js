@@ -2,10 +2,16 @@ export const menus = [{
         id: '1',
         label: 'Drone and IoT',
         children: [{
-            id: '1-1',
-            label: 'Drone Station',
-            url: 'http://localhost:8080/Dashboard/Drone_Workflow.html/'
-        }]
+                id: '1-1',
+                label: 'Drone Survey',
+                url: 'http://localhost:8080/Dashboard/Drone_Workflow.html/'
+            },
+            {
+                id: '1-2',
+                label: 'IoT Sensors',
+                url: 'http://localhost:8080/Dashboard/Drone_Workflow.html/'
+            }
+        ]
     },
     {
         id: '2',
@@ -24,11 +30,11 @@ export const menus = [{
                 label: 'DT Synchronisation',
                 url: 'http://localhost:8600/'
             },
-            {
-                id: '2-3',
-                label: 'Data Streaming',
-                url: 'http://localhost:8080/Dashboard/Spanwise_Dashboard.html'
-            }
+            // {
+            //     id: '2-3',
+            //     label: 'Data Streaming',
+            //     url: 'http://localhost:8080/Dashboard/Spanwise_Dashboard.html'
+            // }
         ]
     },
     {

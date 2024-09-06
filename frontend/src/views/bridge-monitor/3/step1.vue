@@ -73,28 +73,18 @@
       </div>
     </el-dialog>
 
-    <SegmentImage ref="refSegmentImage"></SegmentImage>
+    <SegmentImage ref="refSegmentImage" @imageSegmented="handleSegmentedImage"></SegmentImage>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { Plus } from '@element-plus/icons-vue'
 // import comImg from '@/assets/detection/com.png'
-import defaultImage from '@/assets/detection/20240807-200015.jpg'
+import defaultImage from '@/assets/detection/download.png'
 import { ElMessage } from 'element-plus'
 import SegmentImage from '@/components/segment-image/index.vue'
 
-// import crack2 from '@/assets/detection/crack2.png'
-// import co1 from '@/assets/detection/co1.png'
-// import co2 from '@/assets/detection/co2.png'
-// import co3 from '@/assets/detection/co3.png'
-// import co4 from '@/assets/detection/co4.png'
-// import co5 from '@/assets/detection/co5.png'
-// import co6 from '@/assets/detection/co6.png'
-// import co7 from '@/assets/detection/co7.png'
-// import co8 from '@/assets/detection/co8.png'
-// import co9 from '@/assets/detection/co9.png'
-// import co10 from '@/assets/detection/co10.png'
 
 const props = defineProps({
   questionType: { type: String, default: 'Corrosion' },
@@ -107,20 +97,6 @@ watch(
     type.value = newVal
   }
 )
-// watch(
-//   () => props.stepPanelShow,
-//   (n) => {
-//     if (n) {
-//       // 随机4张腐蚀照片
-//       if (props.questionType === 'Corrosion') {
-//         const imgs = [co1, co2, co3, co4, co5, co6, co7, co8, co9, co10].sort(() => Math.random() - 0.5).slice(0, 3)
-//         form.value.photo = imgs.map((v, i) => { return { name: `co-${i}`, url: v } })
-//       } else {
-//         form.value.photo = [{ name: 'crack1', url: crack2 }]
-//       }
-//     }
-//   }
-// )
 const formDesc = computed(() => type.value === 'Corrosion' ? 'Corrosion' : 'Crack')
 const form = ref({
   bridgeName: 'Bridge 1',
@@ -134,11 +110,25 @@ const form = ref({
     }],
   desc: formDesc
 })
+
+function setImage(imageData) {
+  console.log('Setting image in Step1:', imageData) // 添加这行来调试
+  if (imageData && imageData.file && imageData.url) {
+    form.value.photo = [{
+      name: imageData.file,
+      url: imageData.url
+    }]
+  } else {
+    console.error('Invalid imageData received in Step1:', imageData)
+  }
+}
+
 const rules = ref({
   time: [{ required: true, message: 'Please select time', trigger: 'blur' }],
   photo: [{ required: true, message: 'Please upload photo', trigger: 'blur' }],
   desc: [{ required: true, message: 'Please input description', trigger: 'blur' }]
 })
+
 const refSegmentImage = ref(null)
 function onSegmentClick() {
   refSegmentImage.value.changeVisible()
@@ -155,16 +145,28 @@ const handlePictureCardPreview = (uploadFile) => {
 }
 const refSegmentImg = ref(null)
 const activeFile = ref(null)
+// const handlePictureChange = (file, fileList) => {
+//   console.log(file, fileList)
+//   activeFile.value = file
+//   refSegmentImg.value.changeVisible()
+  
+//   // 如果是第一次上传，替换默认图片
+//   if (form.value.photo.length === 1 && form.value.photo[0].name === 'default-image.jpg') {
+//     form.value.photo = fileList
+//   }
+// }
+
 const handlePictureChange = (file, fileList) => {
   console.log(file, fileList)
   activeFile.value = file
   refSegmentImg.value.changeVisible()
   
-  // 如果是第一次上传，替换默认图片
+  // If it's the first upload, replace the default image
   if (form.value.photo.length === 1 && form.value.photo[0].name === 'default-image.jpg') {
     form.value.photo = fileList
   }
 }
+
 // function onConfirm (file) {
 //   const { name, uid } = form.value.photo.pop()
 //   file.name = name
@@ -186,7 +188,21 @@ function validateForm() {
   })
 }
 
-const emits = defineEmits(['update:questionType'])
+function handleSegmentedImage(imageData) {
+  console.log('Received segmented image in Step1:', imageData)
+  if (imageData && imageData.url) {
+    form.value.photo = [{
+      name: imageData.name,
+      url: imageData.url
+    }]
+    // 通知父组件图片已更新
+    emits('segmentedImageUpdated', imageData)
+  } else {
+    console.error('Invalid imageData received in Step1:', imageData)
+  }
+}
+
+const emits = defineEmits(['update:questionType', 'segmentedImageUpdated'])
 function onRadioChange(v) {
   emits('update:questionType', v)
 }
@@ -195,7 +211,7 @@ function getImgs() {
 }
 
 // 暴露方法给父组件
-defineExpose({ validateForm, getImgs })
+defineExpose({ validateForm, getImgs, setImage })
 onMounted(() => { })
 onBeforeUnmount(() => { })
 </script>

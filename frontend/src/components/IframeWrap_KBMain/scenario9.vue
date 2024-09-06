@@ -1,11 +1,15 @@
 <template>
-  <div class="scenario">
+  <div class="scenario-content">
     <h2>Bridge Strengthening Design</h2>
-    <div class="scenario-image">
-      <img src="/imgs/KBMain/Scenario-Strengthening.png" alt="Bridge Strengthening Design" width=100%>
+    
+    <div class="sub-section">
+      <h3>Scenario Introduction</h3>
+      <img src="/imgs/KBMain/Scenario-Strengthening.png" alt="Bridge Strengthening Design" class="scenario-image">
     </div>
-    <div class="design-form">
-      <h3>Strengthening Design Inputs</h3>
+
+    <div class="sub-section user-input">
+      <h3>Scenario Implementation (User Input)</h3>
+      <h4>·input strengthening design parameters</h4>
       <div class="input-group">
         <label>Bridge Type:</label>
         <select v-model="bridgeType">
@@ -31,11 +35,12 @@
         <label>Budget Constraints (USD):</label>
         <input v-model.number="budget" type="number" min="0">
       </div>
-      <button @click="generateDesign">Generate Strengthening Design</button>
-    </div>
-    <div v-if="designResult" class="design-result">
-      <h3>Strengthening Design Recommendation:</h3>
-      <p>{{ designResult }}</p>
+      <button @click="generateDesign">Run the reasoner</button>
+
+      <div v-if="designResult" class="reasoning-result">
+        <h4>·reasoning result</h4>
+        <p>{{ designResult }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -71,11 +76,68 @@ export default {
 </script>
 
 <style scoped>
-.input-group {
-  margin-bottom: 15px;
+.scenario-content {
+  font-family: Arial, sans-serif;
 }
-.scenario-image img {
+
+.sub-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.introduction {
+  background-color: #f8e5e5; /* 浅粉色 */
+}
+
+.user-input {
+  background-color: #e5f8e5; /* 浅绿色 */
+}
+
+h2, h3, h4 {
+  color: #333;
+}
+
+.scenario-image {
   max-width: 100%;
   height: auto;
+  margin-top: 10px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.reasoning-result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 </style>

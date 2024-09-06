@@ -1,0 +1,46 @@
+[{
+        "id": 1,
+        "imageName": "001.png",
+        "coordinates": {
+            "lat": -3.8371296,
+            "lng": 51.651725,
+            "height": 8.45
+        },
+        "coordinates3D": {
+            "x": 46,
+            "y": 51,
+            "z": 34
+        },
+        "bridgeComponent": "Span 1 Main Girder"
+    },
+    {
+        "id": 2,
+        "imageName": "002.png",
+        "coordinates": {
+            "lat": -3.8374279,
+            "lng": 51.651745,
+            "height": 8.76
+        },
+        "coordinates3D": {
+            "x": 126,
+            "y": 87,
+            "z": 36
+        },
+        "bridgeComponent": "Span 2 Main Girder"
+    },
+    {
+        "id": 3,
+        "imageName": "003.png",
+        "coordinates": {
+            "lat": -3.8373485,
+            "lng": 51.651698,
+            "height": 9.24
+        },
+        "coordinates3D": {
+            "x": 123,
+            "y": 97,
+            "z": 41
+        },
+        "bridgeComponent": "Span 2 Deck"
+    }
+]

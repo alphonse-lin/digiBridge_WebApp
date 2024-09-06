@@ -1,0 +1,15 @@
+{
+    "result3": [
+        {
+            "name": "crackonmasonry1",
+            "crackType": "Longitudinal",
+            "maxWidth": 0,
+            "lengthpercentage": 0,
+            "severityRating": "G",
+            "extentRating": 7.0
+        }
+    ],
+    "message": [
+        "Based on the Network Rail Standard-Condition Marking of Bridges (NR/L3/CIV/006/2C), for crackonmasonry1 (Longitudinal crack, 0 mm wide and 0% long), its severity rating is G, and its extent rating is 7.0."
+    ]
+}

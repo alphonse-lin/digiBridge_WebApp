@@ -1,11 +1,15 @@
 <template>
-  <div class="scenario">
+  <div class="scenario-content">
     <h2>Bridge Safety Performance Evaluation</h2>
-    <div class="scenario-image">
-      <img src="/imgs/KBMain/Scenario-Safety.png" alt="Bridge Safety Performance Evaluation" width=100%>
+    
+    <div class="sub-section">
+      <h3>Scenario Introduction</h3>
+      <img src="/imgs/KBMain/Scenario-Safety.png" alt="Bridge Safety Performance Evaluation" class="scenario-image">
     </div>
-    <div class="evaluation-form">
-      <h3>Safety Performance Evaluation Inputs</h3>
+
+    <div class="sub-section user-input">
+      <h3>Scenario Implementation (User Input)</h3>
+      <h4>·input safety performance parameters</h4>
       <div class="input-group">
         <label>Bridge Age (years):</label>
         <input v-model.number="bridgeAge" type="number" min="0">
@@ -30,11 +34,12 @@
           <option>Severe</option>
         </select>
       </div>
-      <button @click="evaluateSafety">Evaluate Safety Performance</button>
-    </div>
-    <div v-if="evaluationResult" class="evaluation-result">
-      <h3>Evaluation Result:</h3>
-      <p>{{ evaluationResult }}</p>
+      <button @click="evaluateSafety">Run the reasoner</button>
+
+      <div v-if="evaluationResult" class="reasoning-result">
+        <h4>·reasoning result</h4>
+        <p>{{ evaluationResult }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -70,11 +75,69 @@ export default {
 </script>
 
 <style scoped>
-.input-group {
-  margin-bottom: 15px;
+.scenario-content {
+  font-family: Arial, sans-serif;
 }
-.scenario-image img {
+
+.sub-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.introduction {
+  background-color: #f8e5e5; /* 浅粉色 */
+}
+
+.user-input {
+  background-color: #e5f8e5; /* 浅绿色 */
+}
+
+h2, h3, h4 {
+  color: #333;
+}
+
+.scenario-image {
   max-width: 100%;
   height: auto;
+  margin-top: 10px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.reasoning-result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
 }
 </style>

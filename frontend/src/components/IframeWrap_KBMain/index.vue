@@ -5,43 +5,36 @@
     width="1000px">
     <div style="height: 100%;">
       <KBasedMaintenance
-        v-if="selected.id && selected.id === '4-1-1'"></KBasedMaintenance>
-      <iframe v-else>
-        :src="props.selected.url"
-        frameborder="0"
-        width="100%"
-        height="100%"></iframe>
+        :initialStep="currentStep"
+      ></KBasedMaintenance>
     </div>
-</el-dialog>
+  </el-dialog>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import KBasedMaintenance from './KBasedMaintenance.vue';
+import KBasedMaintenance from './KBasedMaintenance.vue'
 
 const props = defineProps({
   selected: {
     type: Object,
-    default: () => { }
+    default: () => ({})
+  },
+  showScenario: {
+    type: Boolean,
+    default: false
   }
 })
 
-// watch(
-//   () => props.selected,
-//   (n) => {
-//     console.log('%c n: ', 'background-color: pink', n)
-//   },
-//   { immediate: true, deep: true }
-// )
-
 const visible = ref(false)
-function changeVisible () {
+const currentStep = ref(0)
+
+function changeVisible(step = 0) {
   visible.value = !visible.value
+  currentStep.value = step
 }
 
 defineExpose({ changeVisible })
-onMounted(() => { })
-onBeforeUnmount(() => { })
 </script>
 
 <style scoped>

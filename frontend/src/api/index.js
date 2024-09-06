@@ -1,5 +1,6 @@
 import sensors from './sensors'
 
+//TODO: 要加位置
 export const bridges = [{
   id: 1,
   name: 'River Neath Swing Bridge',

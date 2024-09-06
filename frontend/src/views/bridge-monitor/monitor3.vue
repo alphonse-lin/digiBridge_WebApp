@@ -19,18 +19,18 @@
         </div>
         <div class="main">
           <el-steps style="width: 100%;" :active="activeStep" finish-status="success" simple>
-            <el-step title="Detection Form" />
-            <el-step title="Data Selection" />
-            <el-step title="Data Quantification" />
+            <el-step title="Inspection Form" :icon="SuccessFilled" />
+            <!-- <el-step title="Data Selection" :icon="SuccessFilled" /> -->
+            <el-step title="Data Quantification" :icon="SuccessFilled" />
             <!-- <el-step title="Report Generation" /> -->
           </el-steps>
           <div class="step-content">
             <Step1Com v-model:questionType="questionType" v-show="activeStep === 0" ref="refStep1"
               :stepPanelShow="stepPanelShow" :activeStep="activeStep" />
-            <Step2Com v-show="activeStep === 1" ref="refStep2" :activeStep="activeStep" :questionType="questionType"
-              :result="result" />
-            <Step3Com v-show="activeStep === 2" :activeStep="activeStep" :questionType="questionType" :result="result"
-              :selectedImages="selectedImages" />
+            <!-- <Step2Com v-show="activeStep === 1" ref="refStep2" :activeStep="activeStep" :questionType="questionType"
+              :result="result" /> -->
+            <Step3Com v-show="activeStep === 1" :activeStep="activeStep" :questionType="questionType" :result="result"
+              :segmentedImageData="selectedImages" />
           </div>
         </div>
         <div class="footer">
@@ -38,31 +38,39 @@
             <el-button v-show="activeStep !== 0" type="primary" @click="onPrev">back</el-button>
           </div>
           <div>
-            <el-button v-show="activeStep === 0" type="primary" @click="onNext">Data Selection</el-button>
-            <el-button v-show="activeStep === 1" type="primary" :icon="Document" @click="onNext">Data Submit</el-button>
-            <el-button v-show="activeStep === 2" type="primary" :icon="Document" @click="onSubmit">Save
+            <el-button v-show="activeStep === 0" type="primary" @click="onNext">Data Submit</el-button>
+            <el-button v-show="activeStep === 1" type="primary" :icon="Document" @click="onSubmit">Save
               result</el-button>
+            <!-- <el-button v-show="activeStep === 2" type="primary" :icon="Document" @click="onSubmit">Save -->
           </div>
         </div>
       </div>
     </transition>
+
+    <Step1Com v-model:questionType="questionType" v-show="activeStep === 0" ref="refStep1"
+      :stepPanelShow="stepPanelShow" :activeStep="activeStep" @segmentedImageUpdated="handleSegmentedImageUpdate" />
+
+    <Step3Com v-show="activeStep === 1" :activeStep="activeStep" :questionType="questionType" :result="result"
+      :segmentedImageData="segmentedImageData" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import ComTree from './5/com-tree.vue'
 import Step1Com from './3/step1.vue'
-import Step2Com from './3/step2.vue'
+// import Step2Com from './3/step2.vue'
 import Step3Com from './3/step3.vue'
 import { Close, Document } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import Bus from '@/utils/bus'
 import { bridges } from '@/api'
 import { segmentImage, quantifyImages } from '@/api/bridge'
+import { SuccessFilled } from '@element-plus/icons-vue'
 
 const refStep2 = ref(null)
 const selectedImages = ref([])
+const segmentedImageData = ref(null)
 
 // const props = defineProps()
 const stepPanelShow = ref(false)
@@ -132,42 +140,18 @@ function getResult() {
       })
   })
 }
+
 async function onNext() {
+  console.log('Received segmented image data in monitor3:', segmentedImageData)
   if (activeStep.value === 0) {
     const validateResult = await refStep1.value.validateForm()
     if (!validateResult) return
-    loading.value = true
-    try {
-      const imgs = refStep1.value.getImgs()
-      const formData = new FormData()
-      imgs.forEach(img => {
-        formData.append('file', img.raw)
-      })
-      const response = await segmentImage(formData)
-      result.value = response.data
-    } catch (error) {
-      console.error('Error segmenting image:', error)
-      ElMessage.error('Failed to segment image')
-      return
-    } finally {
-      loading.value = false
-    }
+    await uploadImage()
+    await getResult()
   } else if (activeStep.value === 1) {
+    // 可以在这里添加 Step2 的任何验证逻辑
     selectedImages.value = refStep2.value.getSelectedImages()
-    loading.value = true
-    try {
-      const response = await quantifyImages({
-        selected_images: selectedImages.value,
-        question_type: questionType.value
-      })
-      result.value = response.data
-    } catch (error) {
-      console.error('Error quantifying images:', error)
-      ElMessage.error('Failed to quantify images')
-      return
-    } finally {
-      loading.value = false
-    }
+    console.log('selectedImages', selectedImages.value)
   }
 
   if (activeStep.value < 2) {  // 修改这里，允许从 Step2 跳转到 Step3
@@ -183,6 +167,12 @@ function onPrev() {
 function onSubmit() {
   stepPanelShow.value = false
   ElMessage.success('Saved successfully!')
+  Bus.emit('showKBasedMaintenance', { showScenario: 2 })
+}
+
+function handleSegmentedImageUpdate(imageData) {
+  console.log('Received segmented image data in monitor3:', imageData)
+  segmentedImageData.value = imageData
 }
 
 onMounted(() => {
@@ -195,12 +185,19 @@ onMounted(() => {
     stepPanelShow.value = true
     activeStep.value = 0
   })
-  Bus.on('monitor3PanelShow', () => {
+  Bus.on('monitor3PanelShow', (imageData) => {
+    console.log('Received imageData:', imageData) // 添加这行来调试
     stepPanelShow.value = true
     activeStep.value = 0
+
+    if (imageData && refStep1.value) {
+      refStep1.value.setImage(imageData)
+    } else {
+      console.error('imageData or refStep1 is undefined', { imageData, refStep1: refStep1.value })
+    }
   })
 })
-onBeforeUnmount(() => { })
+onBeforeUnmount(() => { Bus.off('monitor3PanelShow') })
 </script>
 
 <style lang='scss' scoped>

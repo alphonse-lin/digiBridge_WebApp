@@ -47,6 +47,12 @@ import Scenario9 from './scenario9.vue'
 
 export default {
   name: 'MaintenanceScenario',
+  props: {
+    initialScenarioId: {
+      type: Number,
+      default: 1
+    }
+  },
   components: {
     Scenario1,
     Scenario2,
@@ -62,6 +68,7 @@ export default {
     return {
       currentScenario: 1,
       currentStandard: 'all',
+      currentScenario: this.initialScenarioId,
       showingOntology: false,
       scenarios: [
         { id: 1, title: 'Evaluating Corrosion on Metal', standard: 'UK' },
@@ -109,6 +116,9 @@ export default {
   watch: {
     currentScenario(newVal, oldVal) {
       console.log(`Scenario changed from ${oldVal} to ${newVal}`)
+    },
+    initialScenarioId(newVal) {
+      this.setCurrentScenario(newVal)
     }
   }
 }

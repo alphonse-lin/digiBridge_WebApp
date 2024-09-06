@@ -10,6 +10,11 @@ function initEvent (mapViewer, store) {
   eventHandler = new Cesium.ScreenSpaceEventHandler(mapViewer.canvas)
   // 左击事件
   eventHandler.setInputAction((event) => {
+    const position = mapViewer.scene.pickPosition(event.position)
+    const cartographic = Cesium.Ellipsoid.WGS84.cartesianToCartographic(position)
+    const longitude = Cesium.Math.toDegrees(cartographic.longitude)
+    const latitude = Cesium.Math.toDegrees(cartographic.latitude)
+    console.log(cartographic,longitude,latitude)
     // 使用定时器，避免点击事件和双击事件冲突
     clearTimeout(timer)
     timer = setTimeout(() => {

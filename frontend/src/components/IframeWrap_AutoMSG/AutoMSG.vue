@@ -13,8 +13,8 @@
       images of defect and the corresponding maintenance solutions are extracted through a pre-processing algorithm and
       used as the input data
       to train the neural network model.</p>
-    <img src="/imgs/autoMSG/table.png" alt="dataset-preview" class="dataset-preview" width="50%"
-      style="display: block; margin: auto; width: 50%;">
+    <img src="/imgs/autoMSG/table.png" alt="dataset-preview" class="dataset-preview"
+      style="display: block; margin: auto; width: 90%;">
     <!-- <div class="dataset-preview">
         <table>
             <tr>
@@ -56,34 +56,49 @@
       <button id="browse-button" class="browse-button">Browse files</button>
     </div>
 
-    <div v-if="results.length > 0" class="results-container">
+    <p v-if="processing" class="processing-message">Processing it, Please Wait...</p>
+
+    <div v-if="uploadedImage || predictedSolution" class="results-container">
       <h3>Results:</h3>
-      <table class="results-table">
-        <thead>
-          <tr>
-            <th>Predicted Solution</th>
-            <th>Ground Truth</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(result, index) in results" :key="index">
-            <td>{{ result.predictedSolution }}</td>
-            <td>{{ result.groundTruth }}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="result-content">
+        <div v-if="uploadedImage" class="uploaded-image">
+          <h4>Uploaded Image:</h4>
+          <img :src="uploadedImage" alt="Uploaded image" />
+        </div>
+        <div v-if="predictedSolution" class="solution-details">
+          <h4>Predicted Solution:</h4>
+          <p>{{ predictedSolution }}</p>
+          <h4 v-if="groundTruth">Ground Truth:</h4>
+          <p v-if="groundTruth">{{ groundTruth }}</p>
+
+          <h4>Feedback:</h4>
+          <textarea v-model="feedback" placeholder="Enter your feedback here" rows="4"
+            class="feedback-input"></textarea>
+          <button @click="submitFeedback" class="submit-feedback">Submit Feedback</button>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="feedbackSubmitted" class="feedback-message">
+      Feedback submitted successfully!
     </div>
   </div>
 </template>
 
 <script>
+import { generateSolution, addFeedback } from '@/api/bridge'
+
 export default {
   name: 'AutomatedMaintenance',
   data() {
     return {
       results: [],
       predictedSolution: '',
-      groundTruth: ''
+      groundTruth: '',
+      uploadedImage: null,
+      processing: false,
+      feedback: '',
+      feedbackSubmitted: false,
     }
   },
   mounted() {
@@ -136,31 +151,54 @@ export default {
       if (files.length) {
         console.log('File selected:', files[0].name)
         this.uploadFile(files[0])
+
+        // 创建一个本地 URL 来显示上传的图片
+        this.uploadedImage = URL.createObjectURL(files[0])
       }
     },
     async uploadFile(file) {
       const formData = new FormData()
-      formData.append('image', file)
+      formData.append('file', file)
 
       try {
-        const response = await fetch('/api/am_generate_solution', {
-          method: 'POST',
-          body: formData
-        })
-
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
-        }
-
-        const data = await response.json()
-        this.predictedSolution = data.predicted_solution
-        this.groundTruth = data.ground_truth || 'Not available'
-
-        console.log('Success:', data)
+        console.log('Uploading file:', file.name)
+        this.processing = true
+        const response = await generateSolution(formData)
+        console.log('Response:', response)
+        this.predictedSolution = response.predicted_solution
+        this.groundTruth = response.ground_truth || 'Not available'
+        this.imageName = response.image_name // Store the image name
+        console.log('Success:', response)
       } catch (error) {
         console.error('Error:', error)
+        // ... error handling code ...
+      } finally {
+        this.processing = false
       }
     },
+
+    async submitFeedback() {
+      if (!this.feedback.trim()) {
+        alert('Please enter feedback before submitting.')
+        return
+      }
+
+      try {
+        const response = await addFeedback({
+          image_name: this.imageName,
+          feedback: this.feedback
+        })
+        console.log('Feedback submitted:', response)
+        this.feedbackSubmitted = true
+        this.feedback = '' // Clear the feedback input
+        setTimeout(() => {
+          this.feedbackSubmitted = false
+        }, 3000) // Hide the message after 3 seconds
+      } catch (error) {
+        console.error('Error submitting feedback:', error)
+        alert('Failed to submit feedback. Please try again.')
+      }
+    }
   }
 }
 </script>
@@ -219,6 +257,9 @@ p {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: auto;
+  align-items: center;
 }
 
 .drop-zone {
@@ -267,5 +308,91 @@ p {
 
 .browse-button:hover {
   background-color: #e0e0e0;
+}
+
+.processing-message {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+  margin: 20px 0;
+}
+
+.results-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.uploaded-image {
+  flex: 1;
+  min-width: 300px;
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.uploaded-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.solution-details {
+  flex: 1;
+  min-width: 300px;
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.solution-details p {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.feedback-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.submit-feedback {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-feedback:hover {
+  background-color: #0056b3;
+}
+
+.feedback-message {
+  text-align: center;
+  color: #28a745;
+  margin-top: 10px;
+  font-weight: bold;
 }
 </style>

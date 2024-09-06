@@ -1,0 +1,25 @@
+version: '3'
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "8081:80"  # 将主机的 8081 端口映射到容器的 80 端口
+    depends_on:
+      - backend
+
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    volumes:
+      - ./backend:/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

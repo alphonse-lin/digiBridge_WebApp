@@ -51,12 +51,23 @@ export default {
     scenario2,
     scenario3
   },
+  props: {
+    initialStep: {
+      type: Number,
+      default: 0
+    }
+  },
   data() {
     return {
-      activeStep: 0,
+      activeStep: this.initialStep,
       maintenanceScenarioUrl: '/knowledge-basedscenario',
       experimentalDataUrl: '/experimental-data',
       knowledgeImageUrl: '/imgs/KBMain/knowledge.png'
+    }
+  },
+  watch: {
+    initialStep(newValue) {
+      this.navigateToStep(newValue);
     }
   },
   computed: {
@@ -68,7 +79,13 @@ export default {
   methods: {
     navigateToStep(step) {
       this.activeStep = step
+      console.log('Navigating to step:', step);
     }
+  },
+  mounted() {
+    console.log('!!!!!!!!!!!!!!!!!!!')
+    console.log(this.initialStep)
+    // this.navigateToStep(this.initialStep);
   }
 }
 </script>

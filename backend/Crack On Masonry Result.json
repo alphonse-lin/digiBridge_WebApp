@@ -1,0 +1,20 @@
+{
+    "result4": [
+        {
+            "name": "crackonreinforcedconcrete1",
+            "maxWidth": [],
+            "lengthpercentage": [
+                0
+            ],
+            "severityRating": [
+                "D"
+            ],
+            "extentRating": [
+                2.0
+            ]
+        }
+    ],
+    "message": [
+        "Based on the Network Rail Standard-Condition Marking of Bridges (NR/L3/CIV/006/2C), for crackonreinforcedconcrete1([] mm and [0]%), its severity rating is ['D'], and its extent rating is [2.0]."
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "result00": {
+        "name": "corrosion1",
+        "maxDepth": [
+            20
+        ],
+        "percentage": [
+            30
+        ],
+        "severityRating": [
+            "E"
+        ],
+        "extentRating": [
+            5.0
+        ],
+        "maintenanceDecision": [
+            "PreventiveMaintenance: There are medium corrosion defects but can keep normal functions."
+        ]
+    },
+    "message": [
+        "Based on the Network Rail Standard-Condition Marking of Bridges (NR/L3/CIV/006/2C), for corrosion1([20] mm and [30]%), its severity rating is ['E'], and its extent rating is [5.0].",
+        "The maintenance solution of corrosion1 is ['PreventiveMaintenance: There are medium corrosion defects but can keep normal functions.']."
+    ]
+}
